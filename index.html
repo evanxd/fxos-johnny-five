@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <mata charset="utf-8">
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <link id="webArduino" rel="import" href="bower_components/web-arduino/web-arduino.html">
-    <script src="js/index.js"></script>
+    <script defer src="js/index.js"></script>
     <title>WoT.js Playground</title>
   </head>
   <body>
     <web-arduino id="arduino"></web-arduino>
+    <button id="power" disabled>On/Off</button>
   </body>
 </html>
