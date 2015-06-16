@@ -1,0 +1,16 @@
+{
+  "name": "WoT.js Playground",
+  "type": "privileged",
+  "launch_path": "/index.html",
+  "description": "Cool examples for WoT.js",
+  "locales": {
+    "en-US": {
+      "name": "WoT.js Playground",
+      "description": "Cool examples for WoT.js"
+    }
+  },
+  "default_locale": "en-US",
+  "permissions": {
+    "bluetooth":{}
+  }
+}
