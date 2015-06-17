@@ -15,11 +15,7 @@
   });
 
   power.addEventListener('click', function() {
-    if (arduino.d7) {
-      arduino.d7 = Arduino.LOW;
-    } else {
-      arduino.d7 = Arduino.HIGH;
-    }
+    arduino.d7 = !arduino.d7;
   });
 
   blink.addEventListener('click', function() {
@@ -28,11 +24,7 @@
       blinkTimerID = null;
     } else {
       blinkTimerID = setInterval(function() {
-        if (arduino.d7) {
-          arduino.d7 = Arduino.LOW;
-        } else {
-          arduino.d7 = Arduino.HIGH;
-        }
+        arduino.d7 = !arduino.d7;
       }, 300);
     }
   });
