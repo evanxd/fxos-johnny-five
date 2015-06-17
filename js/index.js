@@ -2,12 +2,13 @@
 'use strict';
 
 (function() {
+  var light = document.querySelector('#light');
   var power = document.querySelector('#power');
   var blink = document.querySelector('#blink');
   var arduino;
   var blinkTimerID;
 
-  window.addEventListener('webarduino-connected', function(evt) {
+  light.addEventListener('connected', function(evt) {
     arduino = evt.detail.arduino;
     arduino.d7 = Arduino.HIGH;
     power.disabled = false;
