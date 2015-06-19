@@ -1,12 +1,12 @@
 {
-  "name": "WoT.js Playground",
+  "name": "Play WoT.JS",
   "type": "privileged",
   "launch_path": "/index.html",
   "description": "Cool examples for WoT.js",
   "locales": {
     "en-US": {
-      "name": "WoT.js Playground",
-      "description": "Cool examples for WoT.js"
+      "name": "Play WoT.JS",
+      "description": "Cool examples for WoT.JS"
     }
   },
   "default_locale": "en-US",
