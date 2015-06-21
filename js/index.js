@@ -4,20 +4,31 @@
 (function() {
   var light1 = document.querySelector('#light1');
   var light2 = document.querySelector('#light2');
+  var buttons = document.querySelector('#buttons');
   var power = document.querySelector('#power');
   var blink = document.querySelector('#blink');
   var blinkTimerID;
 
-  light1.addEventListener('connected', function(evt) {
+  light1.addEventListener('connected', function() {
     light1.d7 = Arduino.HIGH;
     power.disabled = false;
     blink.disabled = false;
   });
 
-  light2.addEventListener('connected', function(evt) {
+  light2.addEventListener('connected', function() {
     light2.d7 = Arduino.HIGH;
     power.disabled = false;
     blink.disabled = false;
+  });
+
+  buttons.addEventListener('connected', function() {
+    buttons.subscribe([6, 7]);
+  });
+
+  buttons.addEventListener('digitalpinchanged', function(evt) {
+    var pins = evt.detail.pins;
+    light1.d7 = pins.d7;
+    light2.d7 = pins.d6;
   });
 
   power.addEventListener('click', function() {
