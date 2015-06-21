@@ -28,7 +28,9 @@
   buttons.addEventListener('digitalpinchanged', function(evt) {
     var pins = evt.detail.pins;
     light1.d7 = pins.d7;
-    light2.d7 = pins.d6;
+    // FIXME: Cannot control more man two devices at same time
+    // probably because of BLE APIs.
+    // light2.d7 = pins.d7;
   });
 
   power.addEventListener('click', function() {
