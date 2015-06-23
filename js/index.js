@@ -15,7 +15,7 @@
   });
 
   buttons.addEventListener('connected', function() {
-    buttons.subscribe([6, 7]);
+    buttons.subscribe(7);
   });
 
   buttons.addEventListener('digitalpinchanged', function(evt) {
