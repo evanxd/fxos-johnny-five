@@ -9,12 +9,14 @@
   var blinkTimerID;
 
   light.addEventListener('connected', function() {
+    console.log('The light board is connected.');
     light.d7 = Arduino.HIGH;
     power.disabled = false;
     blink.disabled = false;
   });
 
   buttons.addEventListener('connected', function() {
+    console.log('The buttons board is connected.');
     buttons.subscribe(7);
   });
 
@@ -23,6 +25,7 @@
     light.d7 = pins.d7;
     // FIXME: Cannot control more man two devices at same time
     // probably because of BLE APIs.
+    console.log('The pin 7 of buttons board is changed:' + pins.d7);
   });
 
   power.addEventListener('click', function() {
