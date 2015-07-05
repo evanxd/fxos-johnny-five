@@ -1,6 +1,6 @@
 {
   "name": "Play WoT.JS",
-  "type": "privileged",
+  "type": "certified",
   "launch_path": "/index.html",
   "description": "Cool examples for WoT.js",
   "locales": {
