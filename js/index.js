@@ -2,33 +2,29 @@
 'use strict';
 
 (function() {
-  var light = new Arduino({ address: 'e1:09:43:ea:dd:68' });
+  var arduino = new Arduino({ address: 'e1:09:43:ea:dd:68' });
+  var led = new Arduino.Led(arduino, { pin: 7 });
   var power = document.querySelector('#power');
   var blink = document.querySelector('#blink');
-  var blinkTimerID;
 
-  light.on('connect', function() {
-    console.log('The light board is connected.');
-    light.d7 = Arduino.HIGH;
+  arduino.on('connect', function() {
+    led.toggle(true);
     power.disabled = false;
     blink.disabled = false;
   });
 
   power.addEventListener('click', function() {
-    light.d7 = !light.d7;
+    led.toggle();
   });
 
   blink.addEventListener('click', function() {
-    if (blinkTimerID) {
-      clearInterval(blinkTimerID);
-      blinkTimerID = null;
+    if (led.isBlinking) {
+      led.stop();
     } else {
-      blinkTimerID = setInterval(function() {
-        light.d7 = !light.d7;
-      }, 300);
+      led.blink(300);
     }
   });
 
   // For debugging.
-  window.light = light;
+  window.arduino = arduino;
 }());
