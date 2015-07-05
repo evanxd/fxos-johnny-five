@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <mata charset="utf-8">
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <link id="webArduino" rel="import" href="bower_components/web-arduino/web-arduino.html">
-    <link rel="stylesheet" type="text/css" href="/style/index.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <mata charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script defer src="bower_components/eventemitter2/lib/eventemitter2.js"></script>
+    <script defer src="bower_components/blue-yeast/lib/bluetooth_device.js"></script>
+    <script defer src="bower_components/blue-yeast/lib/blue_yeast.js"></script>
+    <script defer src="bower_components/web-arduino/js/ble_firmata.js"></script>
+    <script defer src="bower_components/web-arduino/js/arduino.js"></script>
     <script defer src="js/index.js"></script>
     <title>WoT.js Playground</title>
   </head>
   <body>
-    <web-arduino id="light" device-address="e1:09:43:ea:dd:68"></web-arduino>
-    <web-arduino id="buttons" device-address="db:32:93:1c:40:cc"></web-arduino>
     <button id="power" disabled>On/Off</button>
     <button id="blink" disabled>Blink</button>
   </body>
