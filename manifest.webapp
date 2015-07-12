@@ -1,12 +1,12 @@
 {
-  "name": "Play WoT.JS",
+  "name": "Johnny Five",
   "type": "certified",
   "launch_path": "/index.html",
-  "description": "Cool examples for WoT.js",
+  "description": "Play Johnny Five.",
   "locales": {
     "en-US": {
-      "name": "Play WoT.JS",
-      "description": "Cool examples for WoT.JS"
+      "name": "Johnny Five",
+      "description": "Play Johnny Five."
     }
   },
   "default_locale": "en-US",

@@ -1,30 +1,13 @@
-/* global Arduino */
+/* global five, BleSerialPort */
 'use strict';
 
 (function() {
-  var arduino = new Arduino({ address: 'e1:09:43:ea:dd:68' });
-  var led = new Arduino.Led(arduino, { pin: 7 });
-  var power = document.querySelector('#power');
-  var blink = document.querySelector('#blink');
-
-  arduino.on('connect', function() {
-    led.toggle(true);
-    power.disabled = false;
-    blink.disabled = false;
-  });
-
-  power.addEventListener('click', function() {
-    led.toggle();
-  });
-
-  blink.addEventListener('click', function() {
-    if (led.isBlinking) {
-      led.stop();
-    } else {
+  var serialPort = new BleSerialPort({ address: 'e1:09:43:ea:dd:68' });
+  serialPort.connect().then(function() {
+    var board = new five.Board({ port: serialPort, repl: false });
+    board.on('ready', function() {
+      var led = new five.Led(7);
       led.blink(300);
-    }
+    });
   });
-
-  // For debugging.
-  window.arduino = arduino;
 }());

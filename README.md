@@ -1,2 +1,2 @@
-# WoT.js Playground
-A FxOS app provided cool examples of WoT.js.
+# Play Johnny Five
+Run Johnny Five on Firefox OS.

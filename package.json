@@ -1,0 +1,19 @@
+{
+  "name": "play-johnny-five",
+  "version": "0.0.1",
+  "homepage": "https://github.com/evanxd/play-johnny-five",
+  "authors": [
+    "Evan Xd <itoyxd@gmail.com>"
+  ],
+  "description": "Run Johnny Five in FxOS.",
+  "keywords": [
+    "arduino",
+    "fxos",
+    "johnny-five"
+  ],
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "ble-serialport": "0.1.1",
+    "browserify-johnny-five": "0.0.1"
+  }
+}

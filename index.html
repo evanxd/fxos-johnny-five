@@ -3,18 +3,11 @@
   <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
     <mata charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="style/index.css">
-    <script defer src="bower_components/eventemitter2/lib/eventemitter2.js"></script>
-    <script defer src="bower_components/blue-yeast/lib/bluetooth_device.js"></script>
-    <script defer src="bower_components/blue-yeast/lib/blue_yeast.js"></script>
-    <script defer src="bower_components/web-arduino/js/ble_firmata.js"></script>
-    <script defer src="bower_components/web-arduino/js/arduino.js"></script>
-    <script defer src="bower_components/web-arduino/js/lib/led.js"></script>
+    <script defer src="node_modules/ble-serialport/build/ble-serialport-bundle.js"></script>
+    <script defer src="node_modules/browserify-johnny-five/build/browserify-johnny-five.js"></script>
     <script defer src="js/index.js"></script>
-    <title>WoT.js Playground</title>
+    <title>Play Johnny Five</title>
   </head>
   <body>
-    <button id="power" disabled>On/Off</button>
-    <button id="blink" disabled>Blink</button>
   </body>
 </html>
