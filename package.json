@@ -1,7 +1,7 @@
 {
-  "name": "play-johnny-five",
+  "name": "fxos-johnny-five",
   "version": "0.0.1",
-  "homepage": "https://github.com/evanxd/play-johnny-five",
+  "homepage": "https://github.com/evanxd/fxos-johnny-five",
   "authors": [
     "Evan Xd <itoyxd@gmail.com>"
   ],
